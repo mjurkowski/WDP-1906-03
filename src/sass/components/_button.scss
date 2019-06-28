@@ -36,14 +36,14 @@
       border: none;
     }
 
+    .active {
+      background-color: $primary;
+      color: #ffffff;
+      border: none;
+    }
+
   &:hover {
     background-color: $primary;
     color: #ffffff;
   }
-}
-
-.active {
-  background-color: $primary !important;
-  color: #ffffff !important;
-  border: none !important;
 }
