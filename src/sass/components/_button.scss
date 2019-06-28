@@ -28,15 +28,14 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
+    .active {
+      background-color: $primary !important;
+      color: #ffffff !important;
+      border: none !important;
+    }
 
   &:hover {
     background-color: $primary;
     color: #ffffff;
   }
-}
-
-.active {
-  background-color: $primary !important;
-  color: #ffffff !important;
-  border: none !important;
 }
