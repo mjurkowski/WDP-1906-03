@@ -29,6 +29,9 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      a {
+        display: none;
+      }
     }
   }
 
@@ -78,5 +81,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+.product-box:hover {
+  .buttons {
+    a {
+      display: inline-block;
+    }
   }
 }
