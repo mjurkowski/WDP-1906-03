@@ -30,6 +30,9 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      a {
+        display: none;
+      }
     }
 
     img {
@@ -89,12 +92,12 @@
     align-items: center;
   }
 }
+
 .outlines .active {
   background-color: $primary;
   color: #ffffff;
   border: none;
 }
-=======
 .product-box:hover {
   .buttons {
     a {
