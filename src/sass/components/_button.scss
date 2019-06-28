@@ -30,15 +30,14 @@
   font-size: 13px;
   line-height: 22px;
   @extend %element-hover;
+    .active {
+      background-color: $primary;
+      color: #ffffff;
+      border: none;
+    }
 
   &:hover {
     background-color: $primary;
     color: #ffffff;
   }
-}
-
-.active {
-  background-color: $primary !important;
-  color: #ffffff !important;
-  border: none !important;
 }
