@@ -50,3 +50,9 @@
     color: #ffffff;
   }
 }
+
+.active {
+  background-color: $primary !important;
+  color: #ffffff !important;
+  border: none !important;
+}
