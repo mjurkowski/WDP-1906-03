@@ -87,8 +87,8 @@ header {
         }
 
         .cart-counter {
-          width: 50px;
-          height: 27px;
+          width: auto;
+          height: auto;
           border-radius: 14px;
           background-color: $header-bg;
           display: flex;
@@ -101,6 +101,7 @@ header {
           right: 50%;
           transform: translate(50%, -50%);
           border: 1px solid $primary;
+          padding: 0 7px;
         }
 
         &:hover {
