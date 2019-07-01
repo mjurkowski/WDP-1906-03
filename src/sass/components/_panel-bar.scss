@@ -45,6 +45,12 @@
           font-size: 18px;
           display: block;
 
+          &::before {
+            content: "";
+            border-bottom: 4px solid #e2e2e2;
+            @extend %element-hover;
+          }
+
           &.active,
           &:hover {
             &::before {
