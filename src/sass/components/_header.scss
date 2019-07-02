@@ -222,3 +222,7 @@ header {
     }
   }
 }
+
+[class*="col"] {
+  border: 3px solid blue;
+}
