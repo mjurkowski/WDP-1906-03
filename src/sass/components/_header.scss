@@ -116,34 +116,42 @@ header {
     background-color: #ffffff;
 
     .container > .row {
-      height: 84px;
+      min-height: 84px; //TEST
     }
 
     .menu {
-      display: flex;
+      //display: flex;
       align-self: stretch;
+      //justify-content: center; // TEST
 
       ul {
         margin: 0;
         padding: 0;
         display: flex;
+        width: 100%; // MENU STRETCHED TO CONTAINER, REMOVE TO KEEP ORIGINAL WIDTH
 
         li {
-          list-style: none;
+          list-style: none; // DEL ???
           display: flex;
-          align-items: stretch;
+          align-items: stretch; // DEL ???
+          width: 100%;
+          //border: 3px solid orange; // DEL
+          height: 78px;
 
           a {
             color: $text-color;
             text-transform: uppercase;
             font-size: 12px;
             padding: 1rem;
-            text-decoration: none;
-            display: flex;
+            text-decoration: none; // DEL ???
             align-items: center;
             border-top: 4px solid #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+            //border: 3px solid gray; // DEL
 
             &:hover,
             &.active {
@@ -165,6 +173,8 @@ header {
       display: inline-flex;
       height: 45px;
       color: $text-color;
+      //justify-content: center;
+      //width: 50%;
 
       .category {
         border-right: 1px solid $form-border-color;
@@ -201,6 +211,7 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        //width: 50%;
 
         input {
           border: 0;
@@ -223,6 +234,40 @@ header {
   }
 }
 
-[class*="col"] {
-  border: 3px solid blue;
+//[class*="col"] {border: 3px solid blue;} // DEL
+
+@media (max-width: 1199.98px) {
+  body > header > div.menu-bar > div > div > div {
+    display: flex;
+    justify-content: center;
+
+    &:nth-of-type(1) {
+      padding-top: 19.5px;
+      padding-bottom: 19.5px;
+    }
+
+    > form {
+      width: 100%;
+
+      div {
+        flex: 50%;
+      }
+    }
+  }
+
+  /*
+  body > header > div.menu-bar > div > div > div.col.order-12.order-xl-1 > form {
+    width: 100%;
+  }
+
+  body > header > .menu-bar > div > div > div.col.order-12.order-xl-1 > form > div {
+    flex: 50%;
+  }
+*/
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
 }
