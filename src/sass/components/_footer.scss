@@ -84,21 +84,27 @@ footer {
 }
 
 @media (max-width: 991.98px) {
-  .copyright {
-    text-align: left !important;
+  .row {
+    align-items: flex-start !important;
+
+    .copyright {
+      text-align: left !important;
+    }
   }
 }
 
 @media (max-width: 767.98px) {
-  .socialmedia {
-    text-align: center !important;
+  .row {
+    .socialmedia {
+      text-align: center !important;
 
-    ul > li {
-      margin: 0 0.5rem !important;
+      ul > li {
+        margin: 0 0.5rem !important;
+      }
     }
-  }
 
-  .copyright {
-    text-align: center !important;
+    .copyright {
+      text-align: center !important;
+    }
   }
 }
