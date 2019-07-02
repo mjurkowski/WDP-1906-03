@@ -2,6 +2,7 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
+  width: 250px;
 
   .photo {
     position: relative;
@@ -83,10 +84,8 @@
     align-items: center;
   }
 }
-.product-box:hover {
-  .buttons {
-    a {
-      display: inline-block;
-    }
-  }
+.outlines .active {
+  background-color: $primary;
+  color: #ffffff;
+  border: none;
 }
