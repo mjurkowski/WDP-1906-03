@@ -2,8 +2,6 @@
   border: 1px solid #b6b6b6;
   text-align: center;
   margin-top: 40px;
-  text-decoration: none;
-  color: $text-color;
 
   .icon {
     transform: translateY(-50%);
@@ -50,16 +48,16 @@
       font-weight: 300;
     }
   }
-}
 
-.active {
-  i {
-    background-color: $primary;
-    color: #ffffff;
-    border-color: $primary;
-  }
+  &.active {
+    i {
+      background-color: $primary;
+      color: #ffffff;
+      border-color: $primary;
+    }
 
-  .content {
-    color: $primary;
+    .content {
+      color: $primary;
+    }
   }
 }
