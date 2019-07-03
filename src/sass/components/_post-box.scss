@@ -23,10 +23,12 @@
 
       .date {
         text-align: left;
+        color: $text-color;
       }
 
       .comments {
         text-align: right;
+        color: $text-color;
       }
     }
 
@@ -42,7 +44,7 @@
     padding: 25px;
 
     h5 {
-      color: $primary;
+      color: $text-color;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
@@ -57,17 +59,22 @@
 
     .more {
       text-align: center;
-      padding-top: 30px;
+      width: 50%;
+      padding: 10px;
+      margin: 0 auto;
+      border: 1px solid silver;
     }
   }
 
   &:hover {
-    h5 {
-      color: $primary;
+    a {
+      text-decoration: none;
     }
-
     .more {
       background-color: $primary;
+    }
+    h5 {
+      color: $primary;
     }
   }
 }
