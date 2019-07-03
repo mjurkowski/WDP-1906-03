@@ -116,27 +116,23 @@ header {
     background-color: #ffffff;
 
     .container > .row {
-      // TU
-      min-height: 84px; //TEST
+      min-height: 84px;
 
       .menu {
-        // TU
         display: flex;
         align-self: stretch;
-        //justify-content: center; // TEST
 
         ul {
           margin: 0;
           padding: 0;
           display: flex;
-          width: 100%; // MENU STRETCHED TO CONTAINER, REMOVE TO KEEP ORIGINAL WIDTH
+          width: 100%; // MENU STRETCHED TO FULL CONTAINER WIDTH, REMOVE TO KEEP ORIGINAL WIDTH
 
           li {
             list-style: none; // DEL ???
             display: flex;
             align-items: stretch; // DEL ???
             width: 100%;
-            //border: 3px solid orange; // DEL
             height: 84px;
 
             a {
@@ -152,7 +148,7 @@ header {
               width: 100%;
               display: inline-flex;
               justify-content: center;
-              //border: 3px solid gray; // DEL
+              background-color: white;
 
               &:hover,
               &.active {
@@ -180,8 +176,6 @@ header {
           display: inline-flex;
           height: 45px;
           color: $text-color;
-          //justify-content: center;
-          //width: 50%;
 
           .category {
             border-right: 1px solid $form-border-color;
@@ -218,7 +212,6 @@ header {
             display: flex;
             align-items: center;
             position: relative;
-            //width: 50%;
 
             input {
               border: 0;
@@ -250,7 +243,9 @@ header {
   }
 }
 
-//[class*="col"] {border: 3px solid blue;} // DEL
+.show {
+  display: inherit !important;
+}
 
 @media (max-width: 1199.98px) {
   body > header > .menu-bar > .container > .row > div {
@@ -277,17 +272,40 @@ header {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
+  body > header > .menu-bar {
+    box-shadow: none;
+
+    > .container > .row {
+      > div > .hamburger {
+        display: inherit;
+      }
+
+      > .menu {
+        display: none;
+        position: absolute;
+        top: 285px;
+        width: 540px;
+
+        ul {
+          display: block;
+          z-index: 999999;
+
+          li {
+            height: 45px;
+            a {
+              background-color: lightgray;
+              border-top: 4px solid lightgray;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 767.98px) {
-  body > header > .menu-bar > .container > .row {
-    > div > .hamburger {
-      display: inherit;
-    }
-
-    > .menu {
-      display: none;
-    }
+@media (max-width: 575.98px) {
+  body > header > .menu-bar > .container > .row > .menu {
+    width: 558px;
   }
 }
