@@ -294,8 +294,8 @@ header {
           li {
             height: 45px;
             a {
-              background-color: lightgray;
-              border-top: 4px solid lightgray;
+              background-color: $bar-color;
+              border-top: 4px solid $bar-color;
             }
           }
         }
