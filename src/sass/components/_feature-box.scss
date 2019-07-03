@@ -50,16 +50,16 @@
       font-weight: 300;
     }
   }
+}
 
-  &:hover {
-    i {
-      background-color: $primary;
-      color: #ffffff;
-      border-color: $primary;
-    }
+.active {
+  i {
+    background-color: $primary;
+    color: #ffffff;
+    border-color: $primary;
+  }
 
-    .content {
-      color: $primary;
-    }
+  .content {
+    color: $primary;
   }
 }
