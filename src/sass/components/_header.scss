@@ -1,15 +1,18 @@
 header {
   .top-bar {
     background-color: $header-topbar-bg;
+    //border: 3px solid orange; // DEL
 
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
+      //border: 3px solid red; // DEL
 
       li {
         display: inline-block;
         line-height: 55px;
+        //border: 3px solid gray; // DEL
 
         a {
           color: #ffffff;
@@ -18,6 +21,7 @@ header {
           &:hover {
             color: $primary;
             text-decoration: none;
+            //border: 3px solid green; // DEL
           }
         }
       }
@@ -230,4 +234,75 @@ header {
 %element-hover {
   transition: border-color $background-transition-time,
     background-color $background-transition-time, color $content-transition-time;
+}
+
+@media (max-width: 1199.98px) {
+  body > header > .menu-bar > .container > .row > div {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+
+    &:nth-of-type(1) {
+      //padding-top: 19.5px;
+      //padding-bottom: 19.5px;
+    }
+
+    > i {
+      //padding-left: 10px;
+    }
+
+    > form {
+      //width: 100%;
+
+      div {
+        //flex: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  body > header > .menu-bar {
+    //box-shadow: none;
+
+    > .container > .row {
+      > div > .hamburger {
+        //display: inherit;
+      }
+
+      > .menu {
+        //display: none;
+        //position: absolute;
+        //top: 285px;
+        //width: 540px;
+
+        ul {
+          //display: block;
+          //z-index: 999999;
+
+          li {
+            //height: 45px;
+            a {
+              //background-color: $bar-color;
+              //border-top: 4px solid $bar-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  body > header > .menu-bar > .container > .row > .menu {
+    //width: 558px;
+  }
+
+  body > header > .top-bar > .container > .row > .text-right > ul > li > a > span {
+    display: none;
+  }
+}
+
+[class*="col"] {
+  border: 3px solid blue;
 }
