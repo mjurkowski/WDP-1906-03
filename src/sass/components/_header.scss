@@ -119,14 +119,14 @@ header {
       min-height: 84px;
 
       .menu {
-        display: flex;
-        align-self: stretch;
+        display: flex; // DEL ???
+        align-self: stretch; // DEL ???
 
         ul {
           margin: 0;
           padding: 0;
           display: flex;
-          width: 100%; // MENU STRETCHED TO FULL CONTAINER WIDTH, REMOVE TO KEEP ORIGINAL WIDTH
+          width: 100%;
 
           li {
             list-style: none; // DEL ???
