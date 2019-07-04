@@ -25,11 +25,19 @@ header {
           }
         }
 
+<<<<<<< HEAD
         a:not(.menu-leading) {
           line-height: 50px;
         }
 
         .menu-leading {
+=======
+        a:not(.lower-line-h) {
+          line-height: 50px;
+        }
+
+        .lower-line-h {
+>>>>>>> finished
           line-height: 20px;
         }
       }
