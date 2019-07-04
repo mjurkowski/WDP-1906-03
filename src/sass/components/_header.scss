@@ -9,18 +9,41 @@ header {
 
       li {
         display: inline-block;
-        line-height: 55px;
 
         a {
           color: #ffffff;
           font-size: 13px;
+<<<<<<< HEAD
           @extend %element-hover;
+=======
+          line-height: 50px;
+
+>>>>>>> finished
           &:hover {
             color: $primary;
             text-decoration: none;
           }
         }
+
+        a:not(.lower-line-h) {
+          line-height: 50px;
+        }
+
+        .lower-line-h {
+          line-height: 20px;
+        }
       }
+    }
+
+    .text-right ul li:hover ul {
+      width: 50px;
+      text-align: left;
+      position: absolute;
+      display: block;
+    }
+
+    .text-right ul li ul {
+      display: none;
     }
 
     .text-left ul li {
@@ -31,13 +54,17 @@ header {
       }
     }
 
-    .text-right ul li {
+    .text-right ul .l-margin {
       margin-left: 1.5rem;
 
       i {
         margin-right: 5px;
       }
     }
+  }
+
+  .top-bar ul .header-menu:hover {
+    height: 180px;
   }
 
   .company-claim {
