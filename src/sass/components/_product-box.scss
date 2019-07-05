@@ -12,9 +12,9 @@
       size: contain;
       position: center;
       repeat: no-repeat;
+      overflow: hidden;
+      align-items: flex-end;
     }
-    overflow: hidden;
-    align-items: flex-end;
 
     .sale {
       position: absolute;
@@ -119,6 +119,13 @@
     }
   }
 >>>>>>> Changes
+}
+.product-box:hover {
+  .buttons {
+    a {
+      display: inline-block;
+    }
+  }
 }
 .product-box:hover {
   .buttons {
