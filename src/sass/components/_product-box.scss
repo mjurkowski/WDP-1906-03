@@ -46,7 +46,6 @@
 >>>>>>> Add hover to links in buttons, add old price to sale section
     }
   }
-
   .content {
     text-align: center;
     padding: 20px;
@@ -89,16 +88,37 @@
   }
 
   .actions {
-    padding: 15px 10px 10px 10px;
+    padding: 10px 5px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
+<<<<<<< HEAD
 }
 .outlines .active {
   background-color: $primary;
   color: #ffffff;
   border: none;
+=======
+
+  .outlines {
+    display: inline-block;
+
+    .btn-outline {
+      margin-left: -3px;
+    }
+
+    .price {
+      margin-right: 5px;
+      display: inline-block;
+    }
+
+    .active {
+      background-color: $primary;
+      color: #ffffff;
+      border: 1px solid $primary;
+    }
+  }
+>>>>>>> Changes
 }
 .product-box:hover {
   .buttons {
