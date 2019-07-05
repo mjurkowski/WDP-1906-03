@@ -105,10 +105,11 @@
     }
   }
 
-.product-box:hover {
-  .buttons {
-    a {
-      display: inline-block;
+  &:hover {
+    .buttons {
+      a {
+        display: inline-block;
+      }
     }
   }
 }
