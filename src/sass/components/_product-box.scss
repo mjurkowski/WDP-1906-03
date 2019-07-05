@@ -33,7 +33,6 @@
       a {
         display: none;
       }
-<<<<<<< HEAD
     }
 
     img {
@@ -42,8 +41,6 @@
       width: 100%;
       height: 100%;
       padding: 0;
-=======
->>>>>>> Add hover to links in buttons, add old price to sale section
     }
   }
   .content {
@@ -91,42 +88,23 @@
     padding: 10px 5px;
     display: flex;
     justify-content: space-between;
-  }
-<<<<<<< HEAD
-}
-.outlines .active {
-  background-color: $primary;
-  color: #ffffff;
-  border: none;
-=======
-
-  .outlines {
-    display: inline-block;
-
-    .btn-outline {
-      margin-left: 1px;
+    .outlines {
+      display: inline-block;
+      .btn-outline {
+        margin-left: 1px;
+      }
     }
-
     .price {
       margin-right: 5px;
       display: inline-block;
     }
-
     .active {
       background-color: $primary;
       color: #ffffff;
       border: 1px solid $primary;
     }
   }
->>>>>>> Changes
-}
-.product-box:hover {
-  .buttons {
-    a {
-      display: inline-block;
-    }
-  }
-}
+
 .product-box:hover {
   .buttons {
     a {
