@@ -175,6 +175,21 @@ header {
         display: flex;
         align-items: center;
         position: relative;
+        ul {
+          list-style: none;
+          ul:first-child {
+            display: block;
+          }
+          ul:first-child ~ li {
+            display: none;
+          }
+          li {
+            i {
+            }
+            a {
+            }
+          }
+        }
 
         i:first-child {
           color: $primary;
