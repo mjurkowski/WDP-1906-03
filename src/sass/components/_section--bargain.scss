@@ -1,0 +1,25 @@
+.section--bargain {
+  margin-bottom: 40px;
+
+  .bargain-box-small {
+    margin: 5px 0;
+
+    img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 140px;
+    }
+  }
+
+  .bargain-box-big {
+    margin: 5px 0;
+
+    img {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 290px;
+    }
+  }
+}
