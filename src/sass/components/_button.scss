@@ -29,15 +29,12 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
-<<<<<<< HEAD
   @extend %element-hover;
     .active {
       background-color: $primary;
       color: #ffffff;
       border: none;
     }
-=======
->>>>>>> Remove changes in feature section
 
   &:hover {
     background-color: $primary;
