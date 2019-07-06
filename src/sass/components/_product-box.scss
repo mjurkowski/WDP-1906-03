@@ -95,11 +95,11 @@
       }
     }
     .price {
+      margin-left: -10px;
       margin-right: 5px;
-      display: inline-block;
+      display: flex;
+      justify-content: space-between;
       .btn-main-small {
-        margin: -5px;
-        padding: 0;
       }
     }
     .active {
