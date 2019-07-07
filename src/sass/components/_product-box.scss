@@ -90,10 +90,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .outlines .active {
+      background-color: $primary;
+      color: #ffffff;
+      border: none;
+    }
+    .price {
+      display: flex;
+      margin-left: 1px;
+      .btn-main-small {
+        margin: 0 4px;
+      }
+    }
   }
-}
-.outlines .active {
-  background-color: $primary;
-  color: #ffffff;
-  border: none;
 }
