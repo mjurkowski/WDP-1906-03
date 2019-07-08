@@ -13,12 +13,9 @@ header {
         a {
           color: #ffffff;
           font-size: 13px;
-<<<<<<< HEAD
           @extend %element-hover;
-=======
           line-height: 50px;
 
->>>>>>> finished
           &:hover {
             color: $primary;
             text-decoration: none;
