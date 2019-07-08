@@ -5,14 +5,12 @@ footer {
 
     .container {
       text-align: center;
-
       .menu-wrapper {
         h6 {
           color: #ffffff;
           text-transform: uppercase;
           margin: 0 0 1rem 0;
         }
-
         ul {
           margin: 0 0 1.5rem 0;
           padding: 0;
@@ -86,7 +84,7 @@ footer {
 }
 
 @media (max-width: 991.98px) {
-  .row {
+  body > footer > .bottom-bar > .container > .row {
     align-items: flex-start !important;
 
     .copyright {
@@ -96,7 +94,7 @@ footer {
 }
 
 @media (max-width: 767.98px) {
-  .row {
+  body > footer > .bottom-bar > .container > .row {
     .socialmedia {
       text-align: center !important;
 
