@@ -27,54 +27,54 @@ footer {
               }
             }
           }
-        } 
+        }
       }
+    }
 
-      .payment-methods {
+    .payment-methods {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .bottom-bar {
+    background-color: $footer-claim-bg;
+
+    .container > .row {
+      height: 95px;
+    }
+
+    .copyright {
+      p {
+        margin: 0;
+        color: rgb(169, 169, 169);
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .socialmedia {
+      ul {
         margin: 0;
         padding: 0;
         list-style: none;
 
         li {
           display: inline-block;
-        }
-      }
-    }
+          margin-left: 1rem;
 
-    .bottom-bar {
-      background-color: $footer-claim-bg;
+          a {
+            color: rgb(169, 169, 169);
+            text-decoration: none;
+            @extend %element-hover;
 
-      .container > .row {
-        height: 95px;
-      }
-
-      .copyright {
-        p {
-          margin: 0;
-          color: rgb(169, 169, 169);
-          font-size: 14px;
-          line-height: 26px;
-        }
-      }
-
-      .socialmedia {
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-
-          li {
-            display: inline-block;
-            margin-left: 1rem;
-
-            a {
-              color: rgb(169, 169, 169);
-              text-decoration: none;
-              @extend %element-hover;
-
-              &:hover {
-                color: $primary;
-              }
+            &:hover {
+              color: $primary;
             }
           }
         }
@@ -84,7 +84,7 @@ footer {
 }
 
 @media (max-width: 991.98px) {
-  .row {
+  body > footer > .bottom-bar > .container > .row {
     align-items: flex-start !important;
 
     .copyright {
@@ -94,7 +94,7 @@ footer {
 }
 
 @media (max-width: 767.98px) {
-  .row {
+  body > footer > .bottom-bar > .container > .row {
     .socialmedia {
       text-align: center !important;
 
