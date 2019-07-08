@@ -125,6 +125,10 @@ header {
         display: flex;
         align-self: stretch;
 
+        .show {
+          display: inherit;
+        }
+
         ul {
           margin: 0;
           padding: 0;
@@ -262,10 +266,6 @@ header {
   }
 }
 
-.show {
-  display: inherit !important;
-}
-
 @media (max-width: 1199.98px) {
   body > header > .menu-bar > .container > .row > div {
     display: flex;
@@ -319,6 +319,9 @@ header {
             }
           }
         }
+      }
+      .show {
+        display: inherit;
       }
     }
   }
