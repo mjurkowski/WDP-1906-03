@@ -78,3 +78,18 @@
     }
   }
 }
+
+@media (max-width: 1199.98px) {
+  body > .section--blog-posts > div > div > div > .post-box > a > .cover > .details {
+    display: block;
+
+    > .date {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    > .comments {
+      text-align: center;
+    }
+  }
+}
