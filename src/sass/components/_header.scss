@@ -143,31 +143,78 @@ header {
     background-color: #ffffff;
 
     .container > .row {
-      height: 84px;
-    }
+      min-height: 84px;
 
-    .menu {
-      display: flex;
-      align-self: stretch;
-
-      ul {
-        margin: 0;
-        padding: 0;
+      .menu {
         display: flex;
+        align-self: stretch;
 
-        li {
-          list-style: none;
+        .show {
+          display: inherit;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
           display: flex;
-          align-items: stretch;
+          width: 100%;
 
-          a {
-            color: $text-color;
-            text-transform: uppercase;
-            font-size: 12px;
-            padding: 1rem;
-            text-decoration: none;
+          li {
+            list-style: none;
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            height: 84px;
+
+            a {
+              color: $text-color;
+              text-transform: uppercase;
+              font-size: 12px;
+              padding: 1rem;
+              text-decoration: none;
+              align-items: center;
+              border-top: 4px solid #ffffff;
+              font-weight: 500;
+              letter-spacing: 1px;
+              width: 100%;
+              display: inline-flex;
+              justify-content: center;
+              background-color: white;
+              @extend %element-hover;
+
+              &:hover,
+              &.active {
+                background-color: $primary;
+                color: #ffffff;
+                border-color: $primary;
+              }
+
+              &.active {
+                border-color: $text-color;
+              }
+            }
+          }
+        }
+      }
+
+      div {
+        > .hamburger {
+          display: none;
+          cursor: pointer;
+        }
+
+        > .search-form {
+          border: 1px solid $form-border-color;
+          display: inline-flex;
+          height: 45px;
+          color: $text-color;
+
+          .category {
+            border-right: 1px solid $form-border-color;
             display: flex;
             align-items: center;
+            position: relative;
+            width: 100%;
             border-top: 4px solid #ffffff;
             font-weight: 500;
             letter-spacing: 1px;
@@ -180,74 +227,134 @@ header {
               border-color: $primary;
             }
 
-            &.active {
-              border-color: $text-color;
+            i:first-child {
+              color: $primary;
+              position: absolute;
+              left: 10px;
+              z-index: 0;
+            }
+
+            i:last-child {
+              position: absolute;
+              right: 10px;
+              z-index: 0;
+            }
+
+            select {
+              -webkit-appearance: none;
+              border: 0;
+              background-color: transparent;
+              outline: none;
+              padding: 5px 30px 5px 35px;
+              font-size: 14px;
+              position: relative;
+              z-index: 1;
+              width: 100%;
+            }
+          }
+
+          .search-field {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+
+            input {
+              border: 0;
+              padding-left: 10px;
+              font-size: 14px;
+              outline: none;
+              width: 100%;
+
+              &::placeholder {
+                color: $text-color;
+              }
+            }
+
+            button {
+              border: 0;
+              background-color: transparent;
+              outline: none;
+
+              i {
+                position: absolute;
+                right: 10px;
+                top: 15px;
+                z-index: 0;
+              }
             }
           }
         }
       }
     }
+  }
+}
 
-    .search-form {
-      border: 1px solid $form-border-color;
-      display: inline-flex;
-      height: 45px;
-      color: $text-color;
+@media (max-width: 1199.98px) {
+  body > header > .menu-bar > .container > .row > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-      .category {
-        border-right: 1px solid $form-border-color;
-        display: flex;
-        align-items: center;
-        position: relative;
+    &:nth-of-type(1) {
+      padding-top: 19.5px;
+      padding-bottom: 19.5px;
+    }
 
-        i:first-child {
-          color: $primary;
-          position: absolute;
-          left: 10px;
-          z-index: 0;
-        }
+    > i {
+      padding-left: 10px;
+    }
 
-        i:last-child {
-          position: absolute;
-          right: 10px;
-          z-index: 0;
-        }
+    > form {
+      width: 100%;
 
-        select {
-          -webkit-appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: none;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
-        }
-      }
-
-      .search-field {
-        display: flex;
-        align-items: center;
-        position: relative;
-
-        input {
-          border: 0;
-          padding-left: 10px;
-          font-size: 14px;
-          outline: none;
-
-          &::placeholder {
-            color: $text-color;
-          }
-        }
-
-        button {
-          border: 0;
-          background-color: transparent;
-          outline: none;
-        }
+      div {
+        flex: 50%;
       }
     }
+  }
+}
+
+@media (max-width: 767.98px) {
+  body > header > .menu-bar {
+    box-shadow: none;
+
+    > .container > .row {
+      > div > .hamburger {
+        display: inherit;
+      }
+
+      > .menu {
+        display: none;
+        position: absolute;
+        top: 285px;
+        width: 516px;
+
+        ul {
+          display: block;
+          z-index: 999999;
+
+          li {
+            height: 45px;
+
+            a {
+              background-color: $bar-color;
+              border-top: 4px solid $bar-color;
+            }
+          }
+        }
+      }
+      .show {
+        display: inherit;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  body > header > .menu-bar > .container > .row > .menu {
+    width: 100%;
+    padding-right: 39px;
   }
 }
 
