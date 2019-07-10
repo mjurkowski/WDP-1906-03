@@ -29,8 +29,17 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
+  .active {
+    background-color: $primary;
+    color: #ffffff;
+    border: none;
+  }
   @extend %element-hover;
-
+  .active {
+    background-color: $primary;
+    color: #ffffff;
+    border: none;
+  }
   &:hover {
     background-color: $primary;
     color: #ffffff;
