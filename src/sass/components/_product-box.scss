@@ -79,6 +79,33 @@
       &.full {
         @extend .fas;
       }
+    // star ranking classes
+
+    star-rating {
+      display: block;
+    }
+
+    star {
+      text-decoration: none;
+      color: goldenrod;
+      font-size: 2rem;
+      padding: 0 1px; // space out the stars
+      display: inline;
+    }
+
+    star::before {
+      content: "\2606";
+      cursor: pointer;
+    }
+
+    star:hover::before {
+      content: "\2605";
+      color: #fada55;
+    }
+
+    .fill::before {
+      content: "\2605";
+      color: #bada55;
     }
   }
 }
