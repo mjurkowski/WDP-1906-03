@@ -1,17 +1,11 @@
 /* global Flickity */
 
 var elem = document.querySelector('.main-carousel');
-// var flkty = new Flickity(elem, {
-Flickity(elem, {
-  // options
+/* eslint-disable-next-line */
+var flkty = new Flickity(elem, {
   cellAlign: 'left',
-  contain: true
+  contain: true,
+  groupCells: true,
+  wrapAround: true,
+  autoPlay: 3000
 });
-
-/*
-// element argument can be a selector string
-//   for an individual element
-flkty = new Flickity('.main-carousel', {
-  // options
-});
-*/
