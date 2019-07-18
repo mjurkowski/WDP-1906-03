@@ -113,7 +113,7 @@
 
     star {
       text-decoration: none;
-      color: goldenrod;
+      color: #e1e1e1;
       font-size: 2rem;
       padding: 0 1px; // space out the stars
       display: inline;
@@ -126,12 +126,17 @@
 
     star:hover::before {
       content: "\2605";
-      color: #fada55;
+      color: $primary;
     }
 
     .fill::before {
       content: "\2605";
-      color: #bada55;
+      color: #292929;
+    }
+
+    .fill-clicked::before {
+      content: "\2605";
+      color: $primary;
     }
 
     .fill-clicked::before {

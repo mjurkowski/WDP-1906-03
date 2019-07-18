@@ -9,6 +9,7 @@
     var boxDataRate = parseInt(event.target.getAttribute('data-rate'));
     var stars = parent.getElementsByTagName('star');
     var j;
+<<<<<<< HEAD
 
     if (isClicked === 'clicked') {
       return;
@@ -22,12 +23,22 @@
 
       star.className = ''; // remove all classes
 
+=======
+
+    for (j = 0; j < stars.length; j++) {
+      var star = stars[j];
+      var value = star.getAttribute('data-rate');
+
+      star.className = ''; // remove all classes
+
+>>>>>>> star color changes
       if (value <= boxDataRate) {
         star.classList.add('fill-clicked');
       }
     }
   }
 
+<<<<<<< HEAD
   function mouseoverFunc (event) {
     event.preventDefault();
 
@@ -52,6 +63,26 @@
         star.addEventListener('click', clickedFunc);
       }
     }
+=======
+  function setDefaultStars (box) {
+    var ratingValue = box.getAttribute('default');
+    var j;
+
+    if (ratingValue <= 0) {
+      return;
+    }
+    var stars = box.getElementsByTagName('star');
+    var upperBound = Math.min(stars.length, ratingValue);
+    for (j = 0; j < upperBound; j++) {
+      stars[j].classList.add('fill');
+    }
+  }
+
+  // Checking clicked star...
+  var allStars = document.querySelectorAll('star');
+  for (i = 0; i < allStars.length; i++) {
+    allStars[i].addEventListener('click', mySuperFunc);
+>>>>>>> star color changes
   }
 
   function mouseoverFuncRemove (event) {
@@ -76,6 +107,7 @@
       }
     }
   }
+<<<<<<< HEAD
 
   function setDefaultStars (box) {
     var ratingValue = parseInt(box.getAttribute('default'));
@@ -105,4 +137,6 @@
   for (i = 0; i < productBox.length; i++) {
     setDefaultStars(productBox[i]);
   }
+=======
+>>>>>>> star color changes
 })();
