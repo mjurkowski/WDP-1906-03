@@ -1,11 +1,19 @@
 .section--promoted {
+  border: 3px solid red; // TEST
+  //height: 425px;
+
   .promo-box {
+    border: 3px solid gray; // TEST
+    //height: 400px;
     .promo-panel-bar {
       background-color: $form-border-color;
+      display: flex;
+      justify-content: space-between;
 
       .heading {
         position: relative;
         padding-left: 10px;
+        white-space: nowrap;
 
         h3 {
           color: $bar-color;
@@ -214,24 +222,44 @@
 
   .promo-slider {
     border: 3px solid red; // TEST
+    //height: 430px;
 
     .main-carousel-promo {
       height: 100%;
 
-      //@extend %element-hover;
+      .flickity-viewport {
+        position: relative;
+        //border: 3px solid blue;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background-color: black;
+          opacity: 0.5;
+          height: 70%;
+          z-index: 100;
+        }
+      }
 
       .flickity-button {
-        background: #333;
-        z-index: 200;
+        background: $form-border-color;
+        z-index: 300;
+        @extend %element-hover;
       }
       .flickity-button:hover {
-        background: #f90;
+        background: $primary;
       }
 
       .flickity-prev-next-button {
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
+        width: 50%;
+        height: 40px;
+        border-radius: 0;
+        position: absolute;
+        top: auto;
+        bottom: 32px;
+        transform: translateY(0);
       }
       /* icon color */
       .flickity-button-icon {
@@ -239,15 +267,15 @@
       }
       /* position outside */
       .flickity-prev-next-button.previous {
-        left: -40px;
+        left: 0;
       }
       .flickity-prev-next-button.next {
-        right: -40px;
+        right: 0;
       }
 
       .carousel-cell {
         width: 100%;
-        height: 100%;
+        height: 424px;
 
         &:nth-of-type(1) {
           background: url("/images/product-bad-1.jpeg") center/cover no-repeat;
@@ -263,26 +291,71 @@
       }
     }
 
+    .carousel-info {
+      position: absolute;
+      bottom: 130px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      color: $bar-color;
+      text-transform: uppercase;
+      z-index: 200;
+      letter-spacing: 2px;
+
+      .carousel-slogan,
+      .carousel-offer {
+        margin-bottom: 10px;
+      }
+
+      button {
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        //border-radius: 5px;
+        border-color: $bar-color;
+        cursor: pointer;
+        padding: 8px 15px;
+        margin-top: 8px;
+      }
+
+      .carousel-slogan {
+        font-size: 30px;
+
+        .bold {
+          font-weight: 900;
+        }
+      }
+    }
+    /*
     .carousel-canvas {
       background: black;
       opacity: 0.3;
-      width: 100%;
+      width: 724px;
       height: 70%;
       position: absolute;
-      bottom: 0;
+      bottom: 32px;
       z-index: 100;
     }
+    */
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section--promoted .promo-box .promo-product-box .actions .price > div:nth-child(2) {
+    display: none;
+  }
+
+  .section--promoted .promo-slider .main-carousel-promo .carousel-cell {
+    height: 384px;
   }
 }
 
 @media (max-width: 991.98px) {
-  .main-carousel .carousel-cell {
-    width: 50%;
+  .main-carousel-promo .carousel-cell {
   }
 }
 
 @media (max-width: 767.98px) {
   .main-carousel .carousel-cell {
-    width: 100%;
   }
 }
