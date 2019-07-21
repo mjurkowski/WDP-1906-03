@@ -334,3 +334,21 @@
     }
   }
 }
+
+@media (max-width: 1199.98px) {
+  .section--promoted {
+    .promo-box .promo-product-box .actions .price > div:nth-child(2) {
+      display: none;
+    }
+
+    .promo-slider .main-carousel-promo .carousel-cell {
+      height: 384px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section--promoted .promo-box {
+    display: none;
+  }
+}
