@@ -1,53 +1,54 @@
 .section--promoted {
-  border: 3px solid red; // TEST
-  //height: 425px;
+  margin-top: 40px;
 
   .promo-box {
-    border: 3px solid gray; // TEST
-    //height: 400px;
     .promo-panel-bar {
       background-color: $form-border-color;
       display: flex;
       justify-content: space-between;
 
-      .heading {
-        position: relative;
-        padding-left: 10px;
-        white-space: nowrap;
+      .row {
+        width: 100%;
 
-        h3 {
-          color: $bar-color;
-          text-transform: uppercase;
-          font-size: 20px;
-          line-height: 38px;
-          margin: 0;
-          letter-spacing: 1px;
+        .heading {
+          position: relative;
+          padding-left: 10px;
+          white-space: nowrap;
+
+          h3 {
+            color: $bar-color;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 38px;
+            margin: 0;
+            letter-spacing: 1px;
+          }
         }
-      }
 
-      .dots {
-        ul {
-          margin: 0;
-          padding: 0 0 0 1rem;
-          list-style: none;
-          transform: translateY(-6px);
-          padding-right: 10px;
+        .dots {
+          ul {
+            margin: 0;
+            list-style: none;
+            transform: translateY(-6px);
+            padding-right: 10px;
+            text-align: right;
 
-          li {
-            display: inline-block;
-            margin-left: 0.5rem;
+            li {
+              display: inline-block;
+              margin-left: 0.5rem;
 
-            a {
-              display: block;
-              width: 13px;
-              height: 13px;
-              border-radius: 6px;
-              background-color: #e1e1e1;
-              @extend %element-hover;
+              a {
+                display: block;
+                width: 13px;
+                height: 13px;
+                border-radius: 6px;
+                background-color: #e1e1e1;
+                @extend %element-hover;
 
-              &.active,
-              &:hover {
-                background-color: $primary;
+                &.active,
+                &:hover {
+                  background-color: $primary;
+                }
               }
             }
           }
@@ -77,7 +78,7 @@
           position: absolute;
           left: 0;
           right: 0;
-          bottom: 3px;
+          bottom: 20px;
 
           a {
             display: block;
@@ -176,7 +177,7 @@
           left: 50%;
           width: 30px;
           border-bottom: 4px solid $primary;
-          transform: translateX(-50%); // DEL ??
+          transform: translateX(-50%);
         }
       }
 
@@ -221,15 +222,13 @@
   }
 
   .promo-slider {
-    border: 3px solid red; // TEST
-    //height: 430px;
+    padding-bottom: 2rem;
 
     .main-carousel-promo {
       height: 100%;
 
       .flickity-viewport {
         position: relative;
-        //border: 3px solid blue;
 
         &::before {
           content: "";
@@ -248,6 +247,7 @@
         z-index: 300;
         @extend %element-hover;
       }
+
       .flickity-button:hover {
         background: $primary;
       }
@@ -258,17 +258,18 @@
         border-radius: 0;
         position: absolute;
         top: auto;
-        bottom: 32px;
+        bottom: 0;
         transform: translateY(0);
       }
-      /* icon color */
+
       .flickity-button-icon {
         fill: white;
       }
-      /* position outside */
+
       .flickity-prev-next-button.previous {
         left: 0;
       }
+
       .flickity-prev-next-button.next {
         right: 0;
       }
@@ -311,11 +312,16 @@
         text-transform: uppercase;
         outline: none;
         border: none;
-        //border-radius: 5px;
         border-color: $bar-color;
         cursor: pointer;
         padding: 8px 15px;
         margin-top: 8px;
+        @extend %element-hover;
+
+        &:hover {
+          background-color: $primary;
+          color: $bar-color;
+        }
       }
 
       .carousel-slogan {
@@ -326,36 +332,5 @@
         }
       }
     }
-    /*
-    .carousel-canvas {
-      background: black;
-      opacity: 0.3;
-      width: 724px;
-      height: 70%;
-      position: absolute;
-      bottom: 32px;
-      z-index: 100;
-    }
-    */
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .section--promoted .promo-box .promo-product-box .actions .price > div:nth-child(2) {
-    display: none;
-  }
-
-  .section--promoted .promo-slider .main-carousel-promo .carousel-cell {
-    height: 384px;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .main-carousel-promo .carousel-cell {
-  }
-}
-
-@media (max-width: 767.98px) {
-  .main-carousel .carousel-cell {
   }
 }
