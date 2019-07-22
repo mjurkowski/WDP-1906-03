@@ -6,6 +6,15 @@ var flkty = new Flickity(elem, {
   cellAlign: 'left',
   contain: true,
   pageDots: false,
-  wrapAround: true,
-  autoPlay: 3000
+  wrapAround: true
+});
+
+var ClickCatch = document.getElementById('swipeCatchZone');
+
+ClickCatch.addEventListener('swipeleft', function (e) {
+  flkty.next();
+});
+
+ClickCatch.addEventListener('swiperight', function (e) {
+  flkty.previous();
 });
