@@ -48,6 +48,7 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
+      @extend %element-hover;
     }
 
     p {
@@ -75,6 +76,21 @@
     }
     h5 {
       color: $primary;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  body > .section--blog-posts > div > div > div > .post-box > a > .cover > .details {
+    display: block;
+
+    > .date {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    > .comments {
+      text-align: center;
     }
   }
 }
