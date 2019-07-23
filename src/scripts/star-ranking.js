@@ -25,9 +25,15 @@
 
 =======
 
+    if (isClicked === 'clicked') {
+      return;
+    } else {
+      parent.setAttribute('param', 'clicked');
+    }
+
     for (j = 0; j < stars.length; j++) {
       var star = stars[j];
-      var value = star.getAttribute('data-rate');
+      var value = parseInt(star.getAttribute('data-rate'));
 
       star.className = ''; // remove all classes
 
@@ -39,6 +45,9 @@
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> added mouseover functions
   function mouseoverFunc (event) {
     event.preventDefault();
 
@@ -63,24 +72,55 @@
         star.addEventListener('click', clickedFunc);
       }
     }
+<<<<<<< HEAD
 =======
+=======
+  }
+
+  function mouseoverFuncRemove (event) {
+    event.preventDefault();
+
+    var parent = event.target.parentNode;
+    var stars = parent.getElementsByTagName('star');
+    var j;
+    var value = parseInt(parent.getAttribute('default'));
+    var upperBound = Math.min(stars.length, value);
+
+    var isClicked = parent.getAttribute('param');
+
+    if (isClicked !== 'clicked') {
+      for (j = 0; j < stars.length; j++) {
+        var star = stars[j];
+        star.className = '';
+      }
+
+      for (j = 0; j < upperBound; j++) {
+        stars[j].classList.add('fill');
+      }
+    }
+  }
+
+>>>>>>> added mouseover functions
   function setDefaultStars (box) {
-    var ratingValue = box.getAttribute('default');
+    var ratingValue = parseInt(box.getAttribute('default'));
     var j;
 
     if (ratingValue <= 0) {
       return;
     }
+
     var stars = box.getElementsByTagName('star');
     var upperBound = Math.min(stars.length, ratingValue);
+
     for (j = 0; j < upperBound; j++) {
       stars[j].classList.add('fill');
     }
   }
 
-  // Checking clicked star...
+  // Checking onmouseover star...
   var allStars = document.querySelectorAll('star');
   for (i = 0; i < allStars.length; i++) {
+<<<<<<< HEAD
     allStars[i].addEventListener('click', mySuperFunc);
 >>>>>>> star color changes
   }
@@ -128,6 +168,8 @@
   // Checking onmouseover star...
   var allStars = document.querySelectorAll('star');
   for (i = 0; i < allStars.length; i++) {
+=======
+>>>>>>> added mouseover functions
     allStars[i].addEventListener('mouseover', mouseoverFunc);
     allStars[i].addEventListener('mouseout', mouseoverFuncRemove);
   }
