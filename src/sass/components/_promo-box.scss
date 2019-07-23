@@ -1,5 +1,5 @@
 .section--promoted {
-  margin-top: 40px;
+  margin-top: 60px;
 
   .promo-box {
     .promo-panel-bar {
@@ -277,7 +277,7 @@
 
       .carousel-cell {
         width: 100%;
-        height: 100%;
+        height: 428px;
 
         &:nth-of-type(1) {
           background: url("/images/product-bad-1.jpeg") center/cover no-repeat;
@@ -293,10 +293,16 @@
       }
     }
 
+    .grab {
+      cursor: -webkit-grab;
+      cursor: grab;
+    }
+
     .carousel-info {
       position: absolute;
       bottom: 2rem;
       top: 0;
+      padding-top: 25%;
       text-align: center;
       left: 0;
       right: 0;
@@ -330,7 +336,6 @@
 
       .carousel-slogan {
         font-size: 30px;
-        padding-top: 25%;
 
         .bold {
           font-weight: 900;
@@ -345,5 +350,35 @@
       -moz-user-select: none;
       -ms-user-select: none;
     }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section--promoted {
+    .promo-box .promo-product-box .actions .price > div:nth-child(2) {
+      display: none;
+    }
+
+    .promo-slider .main-carousel-promo .carousel-cell {
+      height: 388px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section--promoted {
+    .promo-box {
+      display: none;
+    }
+
+    .promo-slider .carousel-info {
+      padding-top: 22%;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section--promoted .promo-slider .carousel-info {
+    padding-top: 30%;
   }
 }
