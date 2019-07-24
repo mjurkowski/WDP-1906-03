@@ -54,14 +54,6 @@
       }
     }
   }
-  
-  // Checking onmouseover star...
-  var allStars = document.querySelectorAll('star');
-  for (i = 0; i < allStars.length; i++) {
-
-    allStars[i].addEventListener('click', mySuperFunc);
-
-  }
 
   function mouseoverFuncRemove (event) {
     event.preventDefault();
@@ -114,5 +106,4 @@
   for (i = 0; i < productBox.length; i++) {
     setDefaultStars(productBox[i]);
   }
-
 })();
