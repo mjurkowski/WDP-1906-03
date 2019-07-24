@@ -21,6 +21,7 @@
       var value = parseInt(star.getAttribute('data-rate'));
 
       star.className = ''; // remove all classes
+      star.classList.add('nohover');
 
       if (value <= boxDataRate) {
         star.classList.add('fill-clicked');
