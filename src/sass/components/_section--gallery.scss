@@ -19,15 +19,23 @@
       position: relative;
       top: 0;
       left: 0;
+      z-index: 3;
       li {
         padding: 0 10px;
         width: 25%;
         border: 1px solid silver;
         text-align: center;
-        a {
-          color: black;
-          text-decoration: none;
-          font-weight: 500;
+        color: black;
+        background-color: #ffffff;
+        font-weight: 700;
+        &:hover {
+          background-color: #f2f2f2;
+          border-top: 2px solid $primary;
+          display: inline-block;
+          color: $primary;
+          border-top: 2px solid $primary;
+          border-bottom: none;
+          width: 24.99%;
         }
       }
       .active {
@@ -37,6 +45,7 @@
         color: $primary;
         border-top: 2px solid $primary;
         border-bottom: none;
+        width: 24.99%;
       }
     }
     .tab-pane {
@@ -44,23 +53,13 @@
     }
     .vertical {
       width: 20%;
-      padding: 30px 0;
+      padding: 75px 0 55px 0;
       display: block;
       background-color: #f2f2f2;
       position: relative;
-      top: -300px;
+      top: -290px;
       left: 0;
       z-index: 1;
-      .tooltip {
-        border: 1px solid #2a2a2a;
-        background-color: pink;
-        color: #ffffff;
-        font-size: 13px;
-        line-height: 22px;
-        position: relative;
-        top: -150px;
-        left: 0;
-      }
       li {
         list-style: none;
         padding: 5px;
@@ -68,12 +67,74 @@
           text-decoration: none;
           box-shadow: 2px 1px silver;
           background-color: #ffffff;
+          i {
+            display: block;
+          }
           &:hover,
           &:active {
             background-color: $primary;
             color: #ffffff;
           }
         }
+        span {
+          display: none;
+        }
+        &:hover {
+          span {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 8px;
+            font-weight: 500;
+            padding: 1px;
+            position: relative;
+            top: 0;
+            left: 3px;
+            z-index: 3;
+          }
+        }
+      }
+    }
+    .content {
+      width: 42%;
+      height: 90px;
+      box-shadow: 2px 1px silver;
+      background-color: #ffffff;
+      position: relative;
+      top: -434px;
+      left: 58%;
+      z-index: 2;
+      h5 {
+        color: #1a1a1a;
+      }
+      .round {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: gray;
+        color: white;
+        padding: 15px 0;
+        display: block;
+        position: relative;
+        top: -137px;
+        left: 30%;
+        z-index: 3;
+      }
+      .horn-up,
+      .horn-down {
+        width: 15px;
+        height: 20px;
+        z-index: 3;
+      }
+      .horn-up {
+        position: relative;
+        top: -160px;
+        left: -53%;
+      }
+      .horn-down {
+        position: relative;
+        top: -85px;
+        left: 53%;
       }
     }
     .carousel {
@@ -84,46 +145,48 @@
       z-index: 2;
       display: inline-block;
       position: relative;
-      top: -327px;
+      top: -432px;
       left: 16px;
       .images {
-        margin-left: -100px;
-        span {
+        margin-left: -90px;
+        button {
           background-color: black;
           color: silver;
-          padding: 5px 10px;
+          height: 40px;
+          line-height: 40px;
           margin: 0;
           opacity: 0.7;
           z-index: 2;
         }
-        span:first-child {
+        button:first-child {
           position: relative;
-          top: -18px;
-          left: 17%;
+          top: -17px;
+          left: 15%;
         }
-        span:last-child {
+        button:last-child {
           position: relative;
-          top: -18px;
-          left: 21%;
+          top: -17px;
+          left: 18%;
         }
-      }
-      img {
-        width: auto;
-        height: 40px;
-        margin: 25px 10px 25px 0;
-        opacity: 0.5;
-        border: 2px solid silver;
-        z-index: 1;
-        &:hover,
-        &:active {
+        .active {
           opacity: 1;
         }
+        img {
+          width: auto;
+          height: 40px;
+          margin: 25px 1%;
+          opacity: 0.5;
+          border: 2px solid silver;
+          z-index: 1;
+          &:hover,
+          &:active {
+            opacity: 1;
+          }
+        }
       }
-      img:first-child {
-        margin-left: -20%;
-      }
-      .active {
-        opacity: 1;
+      .images:first-child img {
+        margin-left: -2%;
+        margin-right: 4.5%;
       }
     }
   }
@@ -148,15 +211,15 @@
     }
     h2 {
       position: relative;
-      top: -325px;
-      left: 30%;
+      top: -285px;
+      left: 35%;
       color: green;
       font-weight: 700;
     }
     h5 {
       position: relative;
-      top: -325px;
-      left: 24%;
+      top: -290px;
+      left: 25%;
     }
     button {
       background-color: green;

@@ -9,103 +9,89 @@
           </div>
         </div>
         <ul class="nav nav-tabs nav-justified">
-          <li class="active"><a data-toggle="tab" href="#home">FEATURED</a></li>
-          <li><a data-toggle="tab" href="#menu1">TOP SELLER</a></li>
-          <li><a data-toggle="tab" href="#menu2">SALE OFF</a></li>
-          <li><a data-toggle="tab" href="#menu3">TOP RATED</a></li>
+          <li id="m-featured" onclick="">FEATURED</li>
+          <li class="active" id="m-top-seller" onclick="">TOP SELLER</li>
+          <li id="m-sale-off" onclick="">SALE OFF</li>
+          <li id="m-top-rated" onclick="">TOP RATED</li>
         </ul>
-        <div class="tab-content">
-          <div id="home" class="tab-pane fade in active"></div>
-          <div id="menu1" class="tab-pane fade"></div>
-          <div id="menu2" class="tab-pane fade"></div>
-          <div id="menu3" class="tab-pane fade"></div>
-        </div>
         <img
           src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
           alt="image change"
+          onclick=""
         />
         <ul class="vertical">
           <li>
-            <a
-              href="#"
-              class="btn-outline"
-              data-toggle="tooltip"
-              data-placement="top"
-              title="favourite"
-              ><i class="far fa-heart"></i
-            ></a>
+            <a href="#" class="btn-outline">
+              <i class="far fa-heart"></i>
+            </a>
+            <span>favourite</span>
           </li>
           <li>
-            <a
-              href="#"
-              class="btn-outline"
-              data-toggle="tooltip"
-              data-placement="left"
-              title="comparison"
-              ><i class="fas fa-exchange-alt"></i
-            ></a>
+            <a href="#" class="btn-outline">
+              <i class="fas fa-exchange-alt"></i>
+            </a>
+            <span>comparison</span>
           </li>
           <li>
-            <a
-              href="#"
-              class="btn-outline"
-              data-toggle="tooltip"
-              data-placement="right"
-              title="Quick View"
-              ><i class="fas fa-eye"></i
-            ></a>
+            <a href="#" class="btn-outline"><i class="fas fa-eye"></i> </a>
+            <span>Quick View</span>
           </li>
           <li>
-            <a
-              href="#"
-              class="btn-outline"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              title="ADD TO CART"
-              ><i class="fa fa-shopping-basket"></i
-            ></a>
+            <a href="#" class="btn-outline">
+              <i class="fa fa-shopping-basket"></i>
+            </a>
+            <span>ADD TO CART</span>
           </li>
         </ul>
+        <div class="content">
+          <h5>Aenean Ru Bristique</h5>
+          <div class="stars">
+            <a href="#" class="full"></a> <a href="#" class="full"></a>
+            <a href="#"></a> <a href="#"></a> <a href="#"></a>
+          </div>
+          <div class="round">
+            <div>$ 100.00</div>
+            <div><s>$ 120.00</s></div>
+          </div>
+          <img src="/images/Left-Up-Horn.png" class="horn-up" alt="horn" />
+          <img src="/images/Right-Down-Horn.png" class="horn-down" alt="horn" />
+        </div>
         <div class="row carousel">
           <div class="col-12">
             <div class="images">
-              <span><</span>
+              <button onclick=""><</button>
               <img
                 class="active"
                 src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
                 alt="chair"
+                onclick=""
               />
               <img
                 src="https://cdn.pixabay.com/photo/2017/08/03/15/38/architecture-2576906__340.jpg"
                 alt="chair"
+                onclick=""
               />
               <img
                 src="https://cdn.pixabay.com/photo/2016/02/02/14/43/cantilever-1175434__340.png"
                 alt="chair"
+                onclick=""
               />
               <img
                 src="https://cdn.pixabay.com/photo/2019/06/22/01/53/outdoor-table-and-chairs-4290642__340.png"
                 alt="chair"
+                onclick=""
               />
               <img
                 src="https://cdn.pixabay.com/photo/2017/08/01/09/24/house-2563911__340.jpg"
                 alt="chair"
+                onclick=""
               />
               <img
                 src="https://cdn.pixabay.com/photo/2014/11/14/18/08/psychology-531071__340.jpg"
                 alt="chair"
+                onclick=""
               />
-              <span>></span>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="sale">sale</div>
-          <div class="content">
-            <h5>Aenean Ru Bristique</h5>
-            <div class="stars">
-              <a href="#" class="full"></a> <a href="#" class="full"></a>
-              <a href="#"></a> <a href="#"></a> <a href="#"></a>
+              <button onclick="">></button>
             </div>
           </div>
         </div>
