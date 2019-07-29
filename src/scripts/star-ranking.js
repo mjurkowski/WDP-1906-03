@@ -1,7 +1,7 @@
 (function () {
   var i;
 
-  function clickedFunc (event) {
+  function onStarClicked (event) {
     event.preventDefault();
 
     var parent = event.target.parentNode;
@@ -12,9 +12,9 @@
 
     if (isClicked === 'clicked') {
       return;
-    } else {
-      parent.setAttribute('param', 'clicked');
     }
+
+    parent.setAttribute('param', 'clicked');
 
     for (j = 0; j < stars.length; j++) {
       var star = stars[j];
@@ -29,7 +29,7 @@
     }
   }
 
-  function mouseoverFunc (event) {
+  function onMouseOver (event) {
     event.preventDefault();
 
     var parent = event.target.parentNode;
@@ -40,22 +40,24 @@
     var isClicked = parent.getAttribute('param');
 
     if (isClicked === 'clicked') {
-    } else {
-      for (j = 0; j < stars.length; j++) {
-        var star = stars[j];
-        var value = parseInt(star.getAttribute('data-rate'));
+      return;
+    }
 
-        star.className = ''; // remove all classes
+    for (j = 0; j < stars.length; j++) {
+      var star = stars[j];
+      var value = parseInt(star.getAttribute('data-rate'));
 
-        if (value <= boxDataRate) {
-          star.classList.add('fill-clicked');
-        }
-        star.addEventListener('click', clickedFunc);
+      star.className = ''; // remove all classes
+
+      if (value <= boxDataRate) {
+        star.classList.add('fill-clicked');
       }
+
+      star.addEventListener('click', onStarClicked);
     }
   }
 
-  function mouseoverFuncRemove (event) {
+  function onMouseOverRemove (event) {
     event.preventDefault();
 
     var parent = event.target.parentNode;
@@ -97,8 +99,8 @@
   // Checking onmouseover star...
   var allStars = document.querySelectorAll('star');
   for (i = 0; i < allStars.length; i++) {
-    allStars[i].addEventListener('mouseover', mouseoverFunc);
-    allStars[i].addEventListener('mouseout', mouseoverFuncRemove);
+    allStars[i].addEventListener('mouseover', onMouseOver);
+    allStars[i].addEventListener('mouseout', onMouseOverRemove);
   }
 
   // Box's with default class fill ranking
