@@ -57,7 +57,7 @@ Addition of the functionality of selecting products from the Tabs.
 
 ### Task: **WDP190603-51**
 
-_Merge date:_ *2019-07-2x*
+_Merge date:_ *2019-07-29*
 [Link](https://projects.kodilla.com/browse/WDP190603-51)
 
 Script in Javascript to evaluate products - star ranking.
