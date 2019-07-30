@@ -34,6 +34,8 @@ caro1.forEach(function (index) {
     draggable: true
   });
 
+  /*
+  // DZIAŁA PRZY DWÓCH KLIKNIĘCIACH W TAB
   document.querySelector('#bed-carousel-init').addEventListener('click', function () {
     flkty.resize();
   });
@@ -53,29 +55,55 @@ caro1.forEach(function (index) {
   document.querySelector('#dining-carousel-init').addEventListener('click', function () {
     flkty.resize();
   });
+  */
 
   /*
-  // TEST 1
+  // TEST 1 - NIE DZIAŁA
   document.querySelector('.nav-tabs').addEventListener('shown.bs.tab', function() {
     event.target.flkty.resize();
   });
   */
 
   /*
-  // TEST 2
+  // TEST 2 - NIE DZIAŁA
   document.querySelector('.nav-tabs').addEventListener('shown.bs.tab', function() {
     var selector = event.target.getAttribute('href');
-    selector.flkty.resize();
+    document.querySelector(selector).flkty.resize();
+    console.count();
   });
   */
 });
 
 /*
-// ROZWIĄZNIE AUTORA FLICKITY W JQUERY
-$('.nav-tabs').on( 'shown.bs.tab', 'a', function( event ) {
-  // get tab pane
-  var selector = event.target.getAttribute('href');
-  // trigger resize on tab pane
-  $( selector ).flickity('resize');
+// NIE DZIAŁA 1
+$(document).ready(function(){
+  $('.nav-tabs a').click(function(){
+      $(this).tab('show');
+  });
+  $('.nav-tabs a').on('shown.bs.tab', function(){
+      alert('New tab is now visible!');
+  });
+});
+*/
+
+/*
+// NIE DZIAŁA 2 - ROZWIĄZNIE AUTORA FLICKITY W JQUERY
+$('.nav-tabs').on('shown.bs.tab', 'a', function( event ) {
+  console.log('event fired');
+});
+*/
+
+/*
+// NIE DZIAŁA 2 - ZMODYFIKOWANE ROZWIĄZNIE AUTORA FLICKITY W JQUERY
+$('.nav-tabs a').on('shown.bs.tab', function( event ) {
+  console.log('event fired');
+});
+*/
+
+/*
+// NIE DZIAŁA 2 - ZMODYFIKOWANE ROZWIĄZNIE AUTORA FLICKITY W JQUERY
+$('a[data-toggle="tab"]').on('shown.bs.tab', function( event ) {
+  console.log('event fired');
+  alert(event.target.href);
 });
 */
