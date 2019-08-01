@@ -1,7 +1,7 @@
 <div class="section-gallery">
   <div class="container">
     <div class="row">
-      <div class="col-6 img-left">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-left">
         <div class="panel-bar">
           <div class="row no-gutters align-items-end">
             <div class="col-auto heading"><h3>FURNITURE GALLERY</h3></div>
@@ -14,11 +14,13 @@
           <li id="m-sale-off" onclick="">SALE OFF</li>
           <li id="m-top-rated" onclick="">TOP RATED</li>
         </ul>
-        <img
-          src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
-          alt="image change"
-          onclick=""
-        />
+        <div class="background">
+          <img
+            src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
+            alt="image change"
+            onclick=""
+          />
+        </div>
         <ul class="vertical">
           <li>
             <a href="#" class="btn-outline">
@@ -43,60 +45,62 @@
             <span>ADD TO CART</span>
           </li>
         </ul>
+        <div class="round">
+          <div>$ 100.00</div>
+          <div><s>$ 120.00</s></div>
+        </div>
         <div class="content">
           <h5>Aenean Ru Bristique</h5>
           <div class="stars">
             <a href="#" class="full"></a> <a href="#" class="full"></a>
             <a href="#"></a> <a href="#"></a> <a href="#"></a>
           </div>
-          <div class="round">
-            <div>$ 100.00</div>
-            <div><s>$ 120.00</s></div>
-          </div>
           <img src="/images/Left-Up-Horn.png" class="horn-up" alt="horn" />
           <img src="/images/Right-Down-Horn.png" class="horn-down" alt="horn" />
         </div>
-        <div class="row carousel">
-          <div class="col-12">
-            <div class="images">
-              <button onclick=""><</button>
-              <img
-                class="active"
-                src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
-                alt="chair"
-                onclick=""
-              />
-              <img
-                src="https://cdn.pixabay.com/photo/2017/08/03/15/38/architecture-2576906__340.jpg"
-                alt="chair"
-                onclick=""
-              />
-              <img
-                src="https://cdn.pixabay.com/photo/2016/02/02/14/43/cantilever-1175434__340.png"
-                alt="chair"
-                onclick=""
-              />
-              <img
-                src="https://cdn.pixabay.com/photo/2019/06/22/01/53/outdoor-table-and-chairs-4290642__340.png"
-                alt="chair"
-                onclick=""
-              />
-              <img
-                src="https://cdn.pixabay.com/photo/2017/08/01/09/24/house-2563911__340.jpg"
-                alt="chair"
-                onclick=""
-              />
-              <img
-                src="https://cdn.pixabay.com/photo/2014/11/14/18/08/psychology-531071__340.jpg"
-                alt="chair"
-                onclick=""
-              />
-              <button onclick="">></button>
-            </div>
+        <div class="row slider">
+          <div class="col-xs-1 col-sm-1 col-md-1 col-ls-1 col-xl-1">
+            <button onclick=""><</button>
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-ls-10 col-xl-10 images">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376__340.jpg"
+              alt="chair"
+              class="active"
+              onclick=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2017/08/03/15/38/architecture-2576906__340.jpg"
+              alt="chair"
+              onclick=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/02/02/14/43/cantilever-1175434__340.png"
+              alt="chair"
+              onclick=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2019/06/22/01/53/outdoor-table-and-chairs-4290642__340.png"
+              alt="chair"
+              onclick=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2017/08/01/09/24/house-2563911__340.jpg"
+              alt="chair"
+              onclick=""
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2014/11/14/18/08/psychology-531071__340.jpg"
+              alt="chair"
+              onclick=""
+            />
+          </div>
+          <div class="col-xs-1 col-sm-1 col-md-1 col-ls-1 col-xl-1">
+            <button onclick="">></button>
           </div>
         </div>
       </div>
-      <div class="col-6 img-right">
+      <div class="col-lg-6 col-xl-6 img-right">
         <img
           src="https://cdn.pixabay.com/photo/2014/10/16/08/39/bedroom-490779__340.jpg"
           alt="image hero"
