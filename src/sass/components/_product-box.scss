@@ -3,7 +3,6 @@
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  width: 250px;
 
   .photo {
     position: relative;
@@ -143,6 +142,7 @@
     display: flex;
     margin-left: 1px;
     width: auto;
+
     .btn-main-small {
       margin: 0 3px;
     }
@@ -151,5 +151,129 @@
     background-color: $primary;
     color: #ffffff;
     border: 1px solid $primary;
+  }
+}
+
+/*.main-carousel-bed*/
+.tab-pane,
+.main-carousel-chair {
+  margin-bottom: 45px;
+
+  .flickity-page-dots {
+    right: 0;
+    top: -29px;
+    bottom: auto;
+    width: auto;
+    background: white;
+
+    .dot {
+      margin: 0 0 0 12px;
+      width: 13px;
+      height: 13px;
+      background-color: $bar-color;
+      opacity: 1;
+      @extend %element-hover;
+
+      &:first-of-type {
+        margin: 0 0 0 24px;
+      }
+
+      &:hover {
+        background: $primary;
+        opacity: 1;
+      }
+    }
+
+    .dot.is-selected {
+      background: $primary;
+    }
+  }
+
+  .carousel-cell {
+    width: 25%;
+    height: auto;
+
+    &:nth-of-type(4n + 1) {
+      padding: 0 20px 0 0;
+    }
+
+    &:nth-of-type(4n + 2) {
+      padding: 0 13px 0 7px;
+    }
+
+    &:nth-of-type(4n + 3) {
+      padding: 0 7px 0 13px;
+    }
+
+    &:nth-of-type(4n + 4) {
+      padding: 0 0 0 20px;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .section--products /*.main-carousel-bed */.carousel-cell, .section--products .main-carousel-chair .carousel-cell {
+    width: 33.33%;
+
+    &:nth-of-type(3n + 1) {
+      padding: 0 20px 0 0;
+    }
+
+    &:nth-of-type(3n + 2) {
+      padding: 0 10px;
+    }
+
+    &:nth-of-type(3n + 3) {
+      padding: 0 0 0 20px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .section--products .dots {
+    display: none;
+  }
+
+  .section--products/* .main-carousel-bed*/, .section--products .main-carousel-chair {
+    .carousel-cell {
+      width: 50%;
+
+      &:nth-of-type(2n + 1) {
+        padding: 0 20px 0 0;
+      }
+
+      &:nth-of-type(2n + 2) {
+        padding: 0 0 0 20px;
+      }
+    }
+
+    .flickity-page-dots {
+      right: 0;
+      left: 0;
+      top: auto;
+      bottom: 0;
+
+      .dot {
+        margin: 0 0 0 12px;
+
+        &:first-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section--products /*.main-carousel-bed */.carousel-cell, .section--products .main-carousel-chair .carousel-cell {
+    width: 100%;
+
+    &:nth-of-type(2n + 1) {
+      padding: 0;
+    }
+
+    &:nth-of-type(2n + 2) {
+      padding: 0;
+    }
   }
 }
